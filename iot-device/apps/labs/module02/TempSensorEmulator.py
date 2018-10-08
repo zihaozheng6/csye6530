@@ -1,7 +1,7 @@
 '''
-Created on 2018年9月29日
+Created on 2018年9月15日
 
-@author: Howson
+@author: howson
 '''
 import random
 from time import sleep
@@ -38,8 +38,8 @@ class TempSensorEmulator (threading.Thread):
                 self.curTemp = random.uniform(float(self.lowVal), float(self.highVal))             
                 Sens.addValue(self.curTemp)
                 #self.SensorData.addValue(self.curTemp)
-                print('\n--------------------')
-                print('New sensor readings:')
+                print('\n')
+                print('New sensor is:')
                 print(' ' + str(self.curTemp))
                 
                 if self.isPrevTempSet == False:
@@ -48,10 +48,14 @@ class TempSensorEmulator (threading.Thread):
                 else:
                     print (Sens.__str__())
                     print ('\nCurTemp - AvgValue = ' + str(abs(self.curTemp - Sens.getAvgValue())))
-                    print ('Threshold          = ' + str(self.alertDiff))
+                    print ('Threshold  = ' + str(self.alertDiff))
                     if (abs(self.curTemp - Sens.getAvgValue()) >= self.alertDiff):
-                        print('\nCurrent temp exceeds average by > ' + str(self.alertDiff) + '. Triggeringalert...')
+                        print('\nCurrent temp exceeds average by > ' + str(self.alertDiff) )
                         self.sensorData = Sens.__str__()
-                        SmtpConnector.publishMessage('Exceptional sensor data [test]', self.sensorData)
+                        SmtpConnector.publishMessage('Exceptional sensor data ', self.sensorData)
                 sleep(self.rateInSec)
                 
+                
+                
+                
+            

@@ -1,8 +1,9 @@
 '''
-Created on 2018年9月29日
+Created on 2018年9月15日
 
-@author: Howson
+@author: howson
 '''
+
 
 SMTP = 'smtp'
 MQTT = 'mqtt'
@@ -16,8 +17,10 @@ CLOUD = 'cloud'
 SMTP_CLOUD_SECTION = SMTP + SECTION_SEPARATOR + CLOUD
 MQTT_CLOUD_SECTION = MQTT + SECTION_SEPARATOR + CLOUD
 
-HOST_KEY = 'smtp.163.com'
-PORT_KEY = '587'
-FROM_ADDRESS_KEY = 'z6175159040@163.com'
-TO_ADDRESS_KEY = 'z597735908@gmail.com'
-USER_AUTH_TOKEN_KEY = 'zzz666'
+HOST_KEY = 'smtp.gmail.com'
+PORT_KEY = '465'
+FROM_ADDRESS_KEY =
+TO_ADDRESS_KEY =
+USER_AUTH_TOKEN_KEY =
+
+

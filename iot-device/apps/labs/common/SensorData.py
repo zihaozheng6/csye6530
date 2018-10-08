@@ -1,9 +1,8 @@
 '''
-Created on 2018年9月29日
+Created on 2018年9月15日
 
-@author: Howson
+@author: howson
 '''
-
 import os
 
 from datetime import datetime
@@ -57,4 +56,13 @@ class SensorData:
             os.linesep + '\tMin: '     + str(self.minValue) + \
             os.linesep + '\tMax: '     + str(self.maxValue))
         return customStr
+
+
+
+
+
+
+
+
+
 

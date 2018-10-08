@@ -1,9 +1,8 @@
 '''
-Created on 2018年9月29日
+Created on 2018年9月15日
 
-@author: Howson
+@author: howson
 '''
-
 import configparser
 
 
@@ -13,13 +12,13 @@ config = configparser.ConfigParser()
 class ConfigUtil():  
     def __init__(self,fileAddr):  
         self.fileAddr=fileAddr  
-        print ('========== Environment Setting ==========')
-        print ('Already get the fileAddr:' + str(fileAddr))
+        print (' Setting  ......')
+        #print ('Already get the fileAddr:' + str(fileAddr))
         # self.config={}  
         
     def loadConfig(self):  
         self.config = config.read(self.fileAddr)
-        print ('Already get the config:' + str(self.config))
+        #print ('Already get the config:' + str(self.config))
 
     def getProperty(self,section,key):  
         self.section = section
@@ -29,4 +28,9 @@ class ConfigUtil():
         self.key = key
         #print ('KEY value:' + str(self.key))
 
-        return self.key 
+        return self.key  
+    
+    
+    
+    
+    
